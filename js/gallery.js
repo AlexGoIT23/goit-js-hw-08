@@ -76,7 +76,6 @@ const newGallery = (images) => {
       src="${img.preview}"
       data-source="${img.original}"
       alt="${img.description}" 
-      
     />
   </a>
 </li>`
@@ -92,12 +91,12 @@ const instance = basicLightbox.create(`
     <img src="#" alt='#' width="800" height="600">
 `);
 
-function openImg(ev) {
-  ev.preventDefault();
-  if (ev.target.nodeName === "IMG") {
+function openImg(el) {
+  el.preventDefault();
+  if (el.target.nodeName === "IMG") {
     const elem = instance.element().querySelector("img");
-    elem.src = ev.target.dataset.source;
-    elem.alt = ev.target.alt;
+    elem.src = el.target.dataset.source;
+    elem.alt = el.target.alt;
 
     instance.show();
   }
