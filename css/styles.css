@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+.gallery {
+    background-color: aquamarine;
+display: flex;
+flex-wrap: wrap;
+     justify-content: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+ }
+
+.gallery-item {
+    list-style: none;
+   
+}
+
+.gallery-image {
+     width: 480px;
+    height: 320px;
+}
