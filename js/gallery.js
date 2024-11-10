@@ -66,10 +66,9 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const newGallery = (images) => {
-  return images
-    .map(
-      (img) => `<li class="gallery-item">
+const newGallery = images
+  .map(
+    (img) => `<li class="gallery-item">
   <a class="gallery-link" href="${img.original}">
     <img
       class="gallery-image"
@@ -79,11 +78,10 @@ const newGallery = (images) => {
     />
   </a>
 </li>`
-    )
-    .join("");
-};
+  )
+  .join("");
 
-gallery.insertAdjacentHTML("afterbegin", newGallery(images));
+gallery.insertAdjacentHTML("afterbegin", newGallery);
 
 gallery.addEventListener("click", openImg);
 
